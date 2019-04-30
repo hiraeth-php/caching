@@ -24,6 +24,15 @@ class ItemPoolDelegate implements Hiraeth\Delegate
 
 
 	/**
+	 *
+	 */
+	public function __construct(PoolManagerInterface $manager)
+	{
+		$this->manager = $manager;
+	}
+
+
+	/**
 	 * Get the instance of the class for which the delegate operates.
 	 *
 	 * @access public
@@ -32,6 +41,6 @@ class ItemPoolDelegate implements Hiraeth\Delegate
 	 */
 	public function __invoke(Hiraeth\Application $app): object
 	{
-		return $app->get(PoolManager::class)->getDefaultPool();
+		return $this->manager->getDefaultPool();
 	}
 }
