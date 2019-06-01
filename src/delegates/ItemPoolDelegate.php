@@ -3,7 +3,6 @@
 namespace Hiraeth\Caching;
 
 use Hiraeth;
-use Psr\Cache\CacheItemPoolInterface;
 
 /**
  *
