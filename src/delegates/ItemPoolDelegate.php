@@ -10,6 +10,12 @@ use Hiraeth;
 class ItemPoolDelegate implements Hiraeth\Delegate
 {
 	/**
+	 *
+	 */
+	protected $manager = NULL;
+
+
+	/**
 	 * Get the class for which the delegate operates.
 	 *
 	 * @static
