@@ -52,6 +52,15 @@ class PoolManager implements PoolManagerInterface
 	/**
 	 *
 	 */
+	public function has($alias): bool
+	{
+		return isset($this->pools[strtolower($alias)]);
+	}
+
+
+	/**
+	 *
+	 */
 	public function getDefaultPool(): Cache\CacheItemPoolInterface
 	{
 		return $this->get($this->default);

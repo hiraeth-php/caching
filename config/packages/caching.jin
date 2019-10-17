@@ -40,9 +40,3 @@
 	providers = [
 
 	]
-
-[caching]
-
-	pools = {
-		"default": "caches/file"
-	}

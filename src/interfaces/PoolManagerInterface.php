@@ -25,6 +25,12 @@ interface PoolManagerInterface
 	/**
 	 *
 	 */
+	public function has($alias): bool;
+
+
+	/**
+	 *
+	 */
 	public function getDefaultPool(): Cache\CacheItemPoolInterface;
 
 
