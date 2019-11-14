@@ -31,7 +31,7 @@ class ItemPoolDelegate implements Hiraeth\Delegate
 	/**
 	 *
 	 */
-	public function __construct(PoolManagerInterface $manager)
+	public function __construct(PoolManager $manager)
 	{
 		$this->manager = $manager;
 	}

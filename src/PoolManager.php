@@ -8,7 +8,7 @@ use RuntimeException;
 /**
  *
  */
-class PoolManager implements PoolManagerInterface
+class PoolManager
 {
 	/**
 	 *
@@ -25,7 +25,7 @@ class PoolManager implements PoolManagerInterface
 	/**
 	 *
 	 */
-	public function add($alias, Cache\CacheItemPoolInterface $pool): PoolManagerInterface
+	public function add($alias, Cache\CacheItemPoolInterface $pool): PoolManager
 	{
 		$this->pools[strtolower($alias)] = $pool;
 
@@ -70,7 +70,7 @@ class PoolManager implements PoolManagerInterface
 	/**
 	 *
 	 */
-	public function setDefaultPool($alias): PoolManagerInterface
+	public function setDefaultPool($alias): PoolManager
 	{
 		$this->default = $alias;
 	}

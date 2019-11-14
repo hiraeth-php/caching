@@ -14,8 +14,7 @@
 		; actually provides for Psr\Cache\ItemPoolInterface.
 		;
 
-		"Psr\Cache\CacheItemPoolInterface": "Hiraeth\Caching\ItemPool",
-		"Hiraeth\Caching\PoolManagerInterface": "Hiraeth\Caching\PoolManager"
+		"Psr\Cache\CacheItemPoolInterface": "Hiraeth\Caching\ItemPool"
 	}
 
 	;
