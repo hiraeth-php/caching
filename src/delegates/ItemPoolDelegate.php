@@ -16,11 +16,7 @@ class ItemPoolDelegate implements Hiraeth\Delegate
 
 
 	/**
-	 * Get the class for which the delegate operates.
-	 *
-	 * @static
-	 * @access public
-	 * @return string The class for which the delegate operates
+	 * {@inheritDoc}
 	 */
 	static public function getClass(): string
 	{
@@ -29,7 +25,7 @@ class ItemPoolDelegate implements Hiraeth\Delegate
 
 
 	/**
-	 *
+	 * Create a new instance
 	 */
 	public function __construct(PoolManager $manager)
 	{
@@ -38,11 +34,7 @@ class ItemPoolDelegate implements Hiraeth\Delegate
 
 
 	/**
-	 * Get the instance of the class for which the delegate operates.
-	 *
-	 * @access public
-	 * @param Hiraeth\Application $app The application instance for which the delegate operates
-	 * @return object The instance of the class for which the delegate operates
+	 * {@inheritDoc}
 	 */
 	public function __invoke(Hiraeth\Application $app): object
 	{
