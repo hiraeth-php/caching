@@ -35,3 +35,9 @@
 	providers = [
 
 	]
+
+[console]
+
+	commands = [
+		"Hiraeth\Caching\CachePurgeCommand"
+	]

@@ -50,6 +50,15 @@ class PoolManager
 
 
 	/**
+	 * Returns all the Cache Pools
+	 */
+	public function getAll(): Array
+	{
+		return $this->pools;
+	}
+
+
+	/**
 	 *
 	 */
 	public function has($alias): bool
