@@ -11,13 +11,13 @@ use RuntimeException;
 class PoolManager
 {
 	/**
-	 *
+	 * @var string The default pool alias
 	 */
 	protected $default = 'default';
 
 
 	/**
-	 *
+	 * @var array<string, Cache\CacheItemPoolInterface>
 	 */
 	protected $pools = array();
 
@@ -25,7 +25,7 @@ class PoolManager
 	/**
 	 *
 	 */
-	public function add($alias, Cache\CacheItemPoolInterface $pool): PoolManager
+	public function add(string $alias, Cache\CacheItemPoolInterface $pool): PoolManager
 	{
 		$this->pools[strtolower($alias)] = $pool;
 
@@ -36,7 +36,7 @@ class PoolManager
 	/**
 	 *
 	 */
-	public function get($alias): Cache\CacheItemPoolInterface
+	public function get(string $alias): Cache\CacheItemPoolInterface
 	{
 		if (!isset($this->pools[strtolower($alias)])) {
 			throw new RuntimeException(sprintf(
@@ -51,8 +51,10 @@ class PoolManager
 
 	/**
 	 * Returns all the Cache Pools
+	 *
+	 * @return array<string, Cache\CacheItemPoolInterface>
 	 */
-	public function getAll(): Array
+	public function getAll(): array
 	{
 		return $this->pools;
 	}
@@ -61,7 +63,7 @@ class PoolManager
 	/**
 	 *
 	 */
-	public function has($alias): bool
+	public function has(string $alias): bool
 	{
 		return isset($this->pools[strtolower($alias)]);
 	}
@@ -79,8 +81,10 @@ class PoolManager
 	/**
 	 *
 	 */
-	public function setDefaultPool($alias): PoolManager
+	public function setDefaultPool(string $alias): PoolManager
 	{
 		$this->default = $alias;
+
+		return $this;
 	}
 }

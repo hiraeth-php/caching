@@ -43,7 +43,9 @@ class CachePurgeCommand extends Command
 		set_time_limit(0);
 
 		foreach ($this->poolManager->getAll() as $pool) {
-			$pool->purge();
+			$pool->clear();
 		}
+
+		return 0;
 	}
 }

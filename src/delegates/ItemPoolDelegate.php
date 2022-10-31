@@ -10,7 +10,7 @@ use Hiraeth;
 class ItemPoolDelegate implements Hiraeth\Delegate
 {
 	/**
-	 *
+	 * @var PoolManager|null
 	 */
 	protected $manager = NULL;
 
