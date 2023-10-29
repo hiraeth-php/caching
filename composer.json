@@ -15,7 +15,7 @@
         "classmap": ["src/"]
     },
     "require": {
-        "hiraeth/app": "^2.0",
+        "hiraeth/app": "^3.0",
         "psr/cache": "^1.0"
     },
     "require-dev": {
