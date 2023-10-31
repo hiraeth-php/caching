@@ -8,12 +8,12 @@ use Symfony\Component\Console\Output\OutputInterface as Output;
 use Hiraeth\Caching\PoolManager;
 
 /**
- *
+ * A command to purge all caches
  */
 class CachePurgeCommand extends Command
 {
 	/**
-	 *
+	 * @var string
 	 */
 	protected static $defaultName = 'caching:purge';
 
@@ -25,7 +25,7 @@ class CachePurgeCommand extends Command
 
 
 	/**
-	 *
+	 * Construct a new command
 	 */
 	public function __construct(PoolManager $poolManager)
 	{
@@ -36,9 +36,9 @@ class CachePurgeCommand extends Command
 
 
 	/**
-	 *
+	 * {@inheritDoc}
 	 */
-	protected function execute(Input $input, Output $output)
+	protected function execute(Input $input, Output $output): int
 	{
 		set_time_limit(0);
 
