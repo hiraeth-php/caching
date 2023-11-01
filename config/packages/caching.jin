@@ -38,6 +38,6 @@
 
 [console]
 
-	commands = [
-		"Hiraeth\Caching\CachePurgeCommand"
-	]
+	commands = {
+		"cache:purge": "Hiraeth\Caching\CachePurgeCommand"
+	}

@@ -15,7 +15,7 @@ class CachePurgeCommand extends Command
 	/**
 	 * @var string
 	 */
-	protected static $defaultName = 'caching:purge';
+	protected static $defaultName = 'cache:purge';
 
 
 	/**
