@@ -21,7 +21,9 @@
         "symfony/console": "^7.0"
     },
     "autoload": {
-        "classmap": ["src/"]
+        "classmap": [
+            "src"
+        ]
     },
     "autoload-dev": {
         "classmap": [
